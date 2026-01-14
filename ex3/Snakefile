@@ -1,0 +1,4 @@
+rule compress_file:
+    input: '{name}.txt'
+    output: '{name}.txt.gz'
+    shell: 'gzip -c {input} > {output}'

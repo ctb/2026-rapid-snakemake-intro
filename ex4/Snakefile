@@ -1,0 +1,10 @@
+MATCHES = glob_wildcards('{name}.txt')
+
+rule all:
+    input:
+        expand('{name}.txt.gz', name=MATCHES.name)
+
+rule compress_file:
+    input: '{name}.txt'
+    output: '{name}.txt.gz'
+    shell: 'gzip -c {input} > {output}'

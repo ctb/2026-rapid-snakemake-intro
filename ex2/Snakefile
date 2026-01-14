@@ -1,0 +1,5 @@
+rule compress_file:
+    output: "example.txt.gz"
+    shell: """
+        gzip -c example.txt > example.txt.gz
+    """
