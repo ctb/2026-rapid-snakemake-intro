@@ -210,3 +210,4 @@ __marimo__/
 *.info
 *~
 .snakemake
+.DS_Store
