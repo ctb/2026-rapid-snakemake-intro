@@ -1,4 +1,5 @@
 MATCHES = glob_wildcards('{name}.txt')
+print("FOUND the following files:", MATCHES.name)
 
 rule all:
     input:
